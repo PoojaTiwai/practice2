@@ -1,0 +1,37 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    // Get current date and time
+let currentDate = new Date();
+
+// Get day of the week
+let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+let dayOfWeek = daysOfWeek[currentDate.getDay()];
+
+// Get current time
+let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
+let seconds = currentDate.getSeconds();
+
+// Convert hours to 12-hour format
+let period = hours >= 12 ? 'PM' : 'AM';
+hours = hours % 12;
+hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+// Add leading zeros to minutes and seconds if needed
+minutes = minutes < 10 ? '0' + minutes : minutes;
+seconds = seconds < 10 ? '0' + seconds : seconds;
+
+// Display the current day and time
+console.log("Today is: " + dayOfWeek + ".");
+console.log("Current time is: " + hours + " " + period + " : " + minutes + " : " + seconds);
+    </script>
+</body>
+</html>

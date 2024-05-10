@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateArea(a, b, c) {
+    // Using Heron's formula to calculate the area of a triangle
+    let s = (a + b + c) / 2;
+    let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    return area;
+}
+
+// Given sides of the triangle
+let side1 = 5;
+let side2 = 6;
+let side3 = 7;
+
+// Calculate the area
+let area = calculateArea(side1, side2, side3);
+console.log("The area of the triangle is: " + area);
+
+    </script>
+    
+</body>
+</html>
